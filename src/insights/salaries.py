@@ -1,5 +1,4 @@
 from typing import Union, List, Dict
-
 from src.insights.jobs import read
 
 
@@ -8,6 +7,7 @@ def get_max_salary(path: str) -> int:
     max_salary = max(
         int(job["max_salary"]) for job in jobs if job["max_salary"].isdecimal()
     )
+
     return max_salary
 
 
@@ -16,6 +16,7 @@ def get_min_salary(path: str) -> int:
     min_salary = min(
         int(job["min_salary"]) for job in jobs if job["min_salary"].isdecimal()
     )
+
     return min_salary
 
 
